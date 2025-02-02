@@ -5,11 +5,13 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexRouter = require('./routes/index');
-const healthRouter = require('./routes/health');
-
 const path = require('path');
 console.log(path.join(__dirname, 'routes', 'index.js'));
+
+const indexRouter = require(path.join(__dirname, 'routes', 'index.js'));
+const healthRouter = require('./routes/health.js');
+
+
 
 const app = express();
 
