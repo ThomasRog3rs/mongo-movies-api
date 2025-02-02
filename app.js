@@ -10,7 +10,8 @@ console.log(path.join(__dirname, 'routes', 'index.js'));
 
 const indexRouter = require(path.join(__dirname, 'routes', 'index.js'));
 const healthRouter = require('./routes/health.js');
-
+console.log(indexRouter);
+console.log(healthRouter);
 
 
 const app = express();
