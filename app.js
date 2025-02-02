@@ -8,6 +8,9 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const healthRouter = require('./routes/health');
 
+const path = require('path');
+console.log(path.join(__dirname, 'routes', 'index.js'));
+
 const app = express();
 
 app.use(logger('dev'));
@@ -17,6 +20,9 @@ app.use(cookieParser());
 
 app.use('/api', indexRouter);
 app.use('/api/health', healthRouter);
+
+
+
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected'))
