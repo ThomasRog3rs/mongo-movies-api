@@ -4,7 +4,8 @@
   "private": false,
   "scripts": {
     "dev": "nodemon ./app.js",
-    "start": "node ./bin/www"
+    "start": "node ./app.js",
+    "prestart": "npm install"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,5 +20,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }

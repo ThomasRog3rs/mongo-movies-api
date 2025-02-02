@@ -37,7 +37,7 @@ app.use(function(err, req, res, next) {
   res.json({ error: err.message });
 });
 
-const port = process.env.PORT ?? 5000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App started on port ${port}`);
 });
