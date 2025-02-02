@@ -4,7 +4,7 @@ const Movie = require("../models/movieModel");
 
 router.get("/get-all-movies", async function(req, res, next){
   try {
-    const movies = await Movie.find();
+    const movies = await Movie.find().sort({id: -1});
     res.status(200).json(movies);
   } catch (err) {
     console.log(err);
